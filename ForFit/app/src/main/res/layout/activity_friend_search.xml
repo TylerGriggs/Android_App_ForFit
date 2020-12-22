@@ -1,0 +1,187 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorPrimary"
+    tools:context=".FriendSearch">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <android.support.constraint.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <Button
+                android:id="@+id/FS_buttonMyProfile"
+                android:layout_width="130dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginBottom="8dp"
+                android:onClick="buttonMyProfile"
+                android:text="@string/my_profile"
+                app:layout_constraintBottom_toTopOf="@+id/FS_titleFriendSearch"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/FS_buttonHome" />
+
+            <ImageButton
+                android:id="@+id/FS_buttonHome"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="8dp"
+                android:background="@drawable/forfit96"
+                android:contentDescription="@string/home_button"
+                android:onClick="buttonHome"
+                app:layout_constraintEnd_toStartOf="@+id/FS_buttonMyFriends"
+                app:layout_constraintStart_toEndOf="@+id/FS_buttonMyProfile"
+                app:layout_constraintTop_toTopOf="parent"
+                app:srcCompat="@drawable/forfit96" />
+
+            <Button
+                android:id="@+id/FS_buttonMyFriends"
+                android:layout_width="130dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="8dp"
+                android:layout_marginBottom="8dp"
+                android:contentDescription="@string/friends_list"
+                android:onClick="buttonFriendList"
+                android:text="@string/my_friends"
+                app:layout_constraintBottom_toTopOf="@+id/FS_titleFriendSearch"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/FS_buttonHome" />
+
+            <TextView
+                android:id="@+id/FS_titleFriendSearch"
+                android:layout_width="208dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="8dp"
+                android:fontFamily="sans-serif-thin"
+                android:text="@string/friend_search"
+                android:textAlignment="center"
+                android:textColor="@color/colorAccent"
+                android:textSize="24sp"
+                android:visibility="visible"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/FS_buttonHome" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="8dp"
+                android:layout_marginBottom="8dp"
+                android:orientation="vertical"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/FS_titleFriendSearch">
+
+                <ListView
+                    android:id="@+id/FS_friendListView"
+                    android:layout_width="match_parent"
+                    android:layout_height="250dp"
+                    android:divider="@color/colorAccentAlpha"
+                    android:dividerHeight="1dp"
+                    android:listSelector="@color/forFitLightBlue"
+                    android:theme="@style/ListViewDarkTheme" />
+
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="126dp"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginEnd="8dp"
+                    android:layout_marginBottom="8dp"
+                    android:background="@drawable/gradient1"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/FS_textViewUserName">
+
+                    <ImageView
+                        android:id="@+id/FS_imageViewUserProfilePic"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        tools:srcCompat="@tools:sample/avatars" />
+
+                    <Space
+                        android:layout_width="14dp"
+                        android:layout_height="match_parent" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:id="@+id/FS_textViewUserName"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:textAlignment="center"
+                            android:textAppearance="@style/TextAppearance.AppCompat.Large"
+                            android:textColor="@color/colorAccent" />
+
+                        <Space
+                            android:layout_width="match_parent"
+                            android:layout_height="8dp" />
+
+                        <android.support.v4.widget.NestedScrollView
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:fillViewport="true">
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="vertical">
+
+                                <TextView
+                                    android:id="@+id/FS_textViewUserBio"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="@string/search_instruction"
+                                    android:textColor="@color/colorAccent" />
+                            </LinearLayout>
+                        </android.support.v4.widget.NestedScrollView>
+
+                    </LinearLayout>
+
+                </TableRow>
+
+                <Button
+                    android:id="@+id/FS_buttonViewProfile"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:onClick="buttonViewProfile"
+                    android:text="@string/view_profile"
+                    tools:layout_editor_absoluteX="157dp"
+                    tools:layout_editor_absoluteY="612dp" />
+
+                <Button
+                    android:id="@+id/FS_buttonAddFriend"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:onClick="addFriend"
+                    android:text="@string/add_friend"
+                    tools:layout_editor_absoluteX="157dp"
+                    tools:layout_editor_absoluteY="612dp" />
+            </LinearLayout>
+
+        </android.support.constraint.ConstraintLayout>
+    </ScrollView>
+</android.support.constraint.ConstraintLayout>

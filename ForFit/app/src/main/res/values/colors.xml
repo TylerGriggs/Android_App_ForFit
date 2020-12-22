@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#252525</color>
+    <color name="colorPrimaryDark">#2C2D32</color>
+    <color name="colorAccent">#BCBCBD</color>
+    <color name="colorAccentAlpha">#33BCBCBD</color>
+    <color name="colorTransparent">#00FFFFFF</color>
+
+    <color name="forFitBlue">#00D7E7</color>
+    <color name="forFitGreen">#00E714</color>
+    <color name="forFitLightBlue">#8600E7E7</color>
+    <color name="forFitLightGreen">#8300E714</color>
+
+    <color name="colorRed">#FF0000</color>
+    <color name="colorRedAlpha">#9EFF0000</color>
+</resources>

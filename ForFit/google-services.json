@@ -1,0 +1,55 @@
+{
+  "project_info": {
+    "project_number": "335442925135",
+    "firebase_url": "https://forfit-cmsc355group3.firebaseio.com",
+    "project_id": "forfit-cmsc355group3",
+    "storage_bucket": "forfit-cmsc355group3.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:335442925135:android:3a31ec90273b86de",
+        "android_client_info": {
+          "package_name": "com.cmsc355.forfit"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "335442925135-hth1s556o2ingrv2i8hs0b7gfqb437us.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.cmsc355.forfit",
+            "certificate_hash": "bb08321ebcbf1ced96941213f803cd0a6f383340"
+          }
+        },
+        {
+          "client_id": "335442925135-pk77ircnr14664a2ip2205l0cvg4sdhh.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAvT-gkcTXutOgZBWyPU8RxgO2-hY10tT0"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "335442925135-pk77ircnr14664a2ip2205l0cvg4sdhh.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

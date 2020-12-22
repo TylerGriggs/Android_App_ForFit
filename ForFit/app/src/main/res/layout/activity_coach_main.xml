@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorPrimary"
+    tools:context=".CoachMain"
+
+    >
+
+    <ImageButton
+        android:id="@+id/CD_HomeButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        android:background="@drawable/forfit96"
+        app:layout_constraintEnd_toStartOf="@+id/CM_PushNotificationButton"
+        app:layout_constraintStart_toEndOf="@+id/CD_FindAnAthleteButton"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/forfit96" />
+
+    <TextView
+        android:id="@+id/CD_TitleTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="16dp"
+        android:fontFamily="sans-serif-thin"
+        android:text="@string/coach_dashboard"
+        android:textAlignment="center"
+        android:textColor="@color/colorAccent"
+        android:textSize="24sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/CD_HomeButton" />
+
+    <Button
+        android:id="@+id/CD_FindAnAthleteButton"
+        android:layout_width="130dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:onClick="buttonAthleteSearch"
+        android:text="@string/lookup_athletes"
+        app:layout_constraintBottom_toBottomOf="@+id/CD_HomeButton"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/CD_HomeButton" />
+
+    <TextView
+        android:id="@+id/CD_MyChallengesTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="24dp"
+        android:layout_marginEnd="16dp"
+        android:fontFamily="sans-serif"
+        android:text="@string/my_challenges"
+        android:textAlignment="center"
+        android:textColor="@color/colorAccent"
+        android:textSize="24sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/CD_TitleTextView" />
+
+
+    <android.support.constraint.ConstraintLayout
+        android:id="@+id/constraintLayout2"
+        android:layout_width="match_parent"
+        android:layout_height="419dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginBottom="8dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/CD_MyChallengesTextView">
+
+        <ListView
+            android:id="@+id/CD_MyChallengesListView"
+            android:layout_width="0dp"
+            android:layout_height="240dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="8dp"
+            android:background="@drawable/border"
+            android:divider="@color/colorAccentAlpha"
+            android:dividerHeight="1dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <Button
+            android:id="@+id/CD_CreateChallenge"
+            android:layout_width="265dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="8dp"
+            android:onClick="CreateChallenge"
+            android:text="@string/challenge_title"
+            android:textSize="18sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/CD_MyChallengesListView" />
+
+    </android.support.constraint.ConstraintLayout>
+
+    <Button
+        android:id="@+id/CM_PushNotificationButton"
+        android:layout_width="130dp"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="8dp"
+        android:onClick="buttonPushNotification"
+        android:text="@string/push_notification"
+        app:layout_constraintBottom_toBottomOf="@+id/CD_HomeButton"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/CD_HomeButton" />
+
+
+</android.support.constraint.ConstraintLayout>
