@@ -1,5 +1,6 @@
-# Android_App_ForFit
- Software Engineering and Design VCU CMSC355
+# ForFit
+## Software Engineering and Design VCU CMSC355
+ 
  Developed an Android Application based simulated Client's requirement's using Agile methodologies.
 
 ![The ForFit logo on an Andriod phone](https://github.com/TylerGriggs/Android_App_ForFit/blob/main/Media/image2.png?raw=true)
